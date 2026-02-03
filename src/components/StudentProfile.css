@@ -2,43 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* ===== GLOBAL BACKGROUND ===== */
+/* ===== Container ===== */
 .container {
-  min-height: 100vh;
   display: flex;
-  background:
-    linear-gradient(
-      rgba(255, 249, 240, 0.96),
-      rgba(245, 233, 220, 0.98)
-    ),
-    linear-gradient(135deg, #f1dcc6, #d8b999);
-  color: #3e2a1a;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff6eb, #f3e1cc);
 }
 
-/* ===== GLASS EFFECT ===== */
-.glass {
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(201, 168, 130, 0.35);
-  box-shadow: 0 10px 35px rgba(62, 42, 26, 0.18);
-  border-radius: 20px;
-}
-
-/* ===== SIDEBAR ===== */
+/* ===== Sidebar ===== */
 .sidebar {
-  width: 260px;
-  padding: 28px 22px;
+  width: 220px;
+  background: linear-gradient(180deg, #8b5e3c, #6f4528);
+  color: #fffaf3;
+  padding: 20px;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .sidebar h2 {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 35px;
-  color: #8a5a2b;
-  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #fff2e2;
 }
 
 .sidebar ul {
@@ -46,137 +35,211 @@
 }
 
 .sidebar ul li {
-  padding: 14px 18px;
-  margin-bottom: 12px;
-  border-radius: 10px;
+  padding: 12px 16px;
   cursor: pointer;
-  transition: 0.3s;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  color: #f3e4d4;
+  transition: all 0.3s ease;
 }
 
 .sidebar ul li:hover {
-  background: rgba(201, 168, 130, 0.25);
-  transform: translateX(5px);
+  background: rgba(255, 240, 220, 0.25);
+  color: #ffffff;
 }
 
 .sidebar ul li.active {
-  background: rgba(201, 168, 130, 0.35);
+  background: #c0895e;
+  color: #3b2415;
   font-weight: 600;
 }
 
-/* ===== MAIN ===== */
+/* ===== Main ===== */
 .main {
   flex: 1;
-  padding: 40px;
+  padding: 25px;
+  margin-left: 220px;
 }
 
-/* ===== PROFILE HEADER ===== */
+/* ===== Profile Header ===== */
 .profile-header {
+  background: #fff4e8;
+  padding: 22px;
+  border-radius: 14px;
   display: flex;
+  gap: 20px;
   align-items: center;
-  gap: 30px;
-  padding: 35px;
+  box-shadow: 0 4px 12px rgba(90, 53, 31, 0.15);
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #c9a882, #a8876f);
+  background: #e4c9ae;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 36px;
-  color: #fff;
+  color: #5a351f;
+  font-weight: 600;
 }
 
-/* ===== STATS ===== */
+.profile-info p {
+  font-size: 15px;
+  color: #4b2e1a;
+}
+
+/* ===== Cards ===== */
 .cards {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 25px;
 }
 
 .card {
-  padding: 24px;
+  background: linear-gradient(135deg, #fdebd7, #f1d2b0);
+  padding: 26px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(90, 53, 31, 0.3);
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🔥 TEXT VISIBILITY FIX */
 .card h3 {
   font-size: 34px;
-  color: #8a5a2b;
+  color: #5a351f;     /* DEEP BROWN */
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
 .card p {
-  font-size: 14px;
-  text-transform: uppercase;
+  color: #3b2415;     /* DARK CHOCOLATE */
+  font-size: 15px;
+  font-weight: 700;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== Sections ===== */
 .section {
-  margin-top: 40px;
-  padding: 35px;
+  background: #fffaf4;
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(90, 53, 31, 0.15);
 }
 
 .section h3 {
-  margin-bottom: 20px;
+  color: #6f4528;
+  margin-bottom: 15px;
 }
 
-/* ===== TABLE ===== */
+/* ===== Tables ===== */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th, td {
-  padding: 14px;
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2c9af;
+}
+
+table th {
+  background: #f2dcc4;
+  color: #5a351f;
+}
+
+table td {
+  color: #6b4423;
+}
+
+.empty-row {
   text-align: center;
+  color: #8a6a4f;
+  padding: 30px !important;
 }
 
-th {
-  background: rgba(201, 168, 130, 0.35);
+/* ===== Attendance ===== */
+.attendance {
+  display: flex;
+  gap: 40px;
 }
 
-/* ===== BUTTON ===== */
-.logout-btn {
-  margin-top: 24px;
-  padding: 12px 30px;
+.attendance p {
+  color: #4b2e1a;
+}
+
+/* ===== Attendance Stats ===== */
+.attendance-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.attendance-stats p {
+  background: #f6e6d3;
+  padding: 12px;
   border-radius: 10px;
+  color: #4b2e1a;
+}
+
+/* ===== GPA ===== */
+.gpa-info {
+  display: flex;
+  gap: 40px;
+}
+
+.gpa-info p {
+  background: #f6e6d3;
+  padding: 12px;
+  border-radius: 10px;
+  color: #4b2e1a;
+}
+
+/* ===== Logout ===== */
+.logout-btn {
+  background: linear-gradient(135deg, #b45309, #92400e);
+  color: #fff7ed;
+  padding: 12px 26px;
   border: none;
-  font-size: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #c9a882, #a8876f);
-  transition: 0.3s;
+  margin-top: 18px;
 }
 
 .logout-btn:hover {
-  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(90, 53, 31, 0.4);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .sidebar ul li {
-    margin: 6px;
+    width: 180px;
   }
 
   .main {
-    padding: 20px;
+    margin-left: 180px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .attendance,
+  .gpa-info {
+    flex-direction: column;
   }
 }
