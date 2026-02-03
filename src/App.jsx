@@ -9,10 +9,10 @@ import RegisterAdmin from "./Pages/RegisterAdmin";
 import RegisterStudent from "./Pages/RegisterStudent";
 import LoginSelect from "./Pages/LoginSelect";
 import RegisterSelect from "./Pages/RegisterSelect";
-import Courses from "./Components/Courses";
-import StudentProfile from "./Components/StudentProfile";
+import Courses from "./components/Courses";
+import StudentProfile from "./components/StudentProfile";
 import CourseEnroll from "./Pages/CourseEnroll";
-import SectionCourses from "./Components/SectionCourses";
+import SectionCourses from "./components/SectionCourses";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";   // ✅ ADDED
 
