@@ -33,6 +33,8 @@ function Home() {
           <Link to="/courses">Courses</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/announcements">Announcements</Link>
+
         </nav>
 
         <div className="nav-actions">
