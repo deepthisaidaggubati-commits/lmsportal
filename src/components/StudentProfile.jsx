@@ -9,14 +9,6 @@ const StudentProfile = () => {
       case "profile":
         return (
           <>
-            <h2 className="page-title">👤 My Profile</h2>
-            <div className="completion">
-              <span>Profile Completion: 0%</span>
-              <div className="progress-bar">
-                <div className="progress-fill"></div>
-              </div>
-            </div>
-
             <div className="profile-header">
               <div className="profile-pic">
                 <span>Photo</span>
@@ -45,6 +37,7 @@ const StudentProfile = () => {
               </div>
             </div>
 
+            {/* Registered Courses Table */}
             <div className="section">
               <h3>Registered Courses</h3>
               <table>
@@ -66,6 +59,7 @@ const StudentProfile = () => {
               </table>
             </div>
 
+    
             <div className="section">
               <h3>Attendance</h3>
               <div className="attendance">
@@ -110,7 +104,7 @@ const StudentProfile = () => {
               <p><strong>Classes Attended:</strong> —</p>
               <p><strong>Classes Missed:</strong> —</p>
             </div>
-
+            
             <div className="section" style={{ marginTop: "20px" }}>
               <h3>Course-wise Attendance</h3>
               <table>
@@ -182,34 +176,35 @@ const StudentProfile = () => {
 
   return (
     <div className="container">
+      {/* Sidebar */}
       <aside className="sidebar">
         <h2>Dashboard</h2>
         <ul>
-          <li
+          <li 
             className={activeTab === "profile" ? "active" : ""}
             onClick={() => setActiveTab("profile")}
           >
             Profile
           </li>
-          <li
+          <li 
             className={activeTab === "courses" ? "active" : ""}
             onClick={() => setActiveTab("courses")}
           >
             Courses
           </li>
-          <li
+          <li 
             className={activeTab === "attendance" ? "active" : ""}
             onClick={() => setActiveTab("attendance")}
           >
             Attendance
           </li>
-          <li
+          <li 
             className={activeTab === "grades" ? "active" : ""}
             onClick={() => setActiveTab("grades")}
           >
             Grades
           </li>
-          <li
+          <li 
             className={activeTab === "logout" ? "active" : ""}
             onClick={() => setActiveTab("logout")}
           >
@@ -218,6 +213,7 @@ const StudentProfile = () => {
         </ul>
       </aside>
 
+    
       <main className="main">
         {renderContent()}
       </main>

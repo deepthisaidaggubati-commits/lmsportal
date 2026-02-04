@@ -17,6 +17,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";   // ✅ ADDED
 
 import bgVideo from "./assets/bg.mp4/bgvideo.mp4";
+import Announcements from "./Pages/Announcements";
 
 /* ===== VIDEO WRAPPER ===== */
 const VideoBackground = () => {
@@ -58,7 +59,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/enroll/:course" element={<CourseEnroll />} />
         <Route path="/courses/:section" element={<SectionCourses />} />
-
+        <Route path="/announcements" element={<Announcements />} />
         {/* ABOUT & CONTACT */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} /> {/* ✅ ADDED */}
